@@ -80,7 +80,7 @@ function moveObstacle() {
       clearInterval(obstacleInterval);
       moveObstacle();
     }
-  }, 250);
+  }, 20);
 }
 
 // KEYBOARD CONTROLS
