@@ -3,7 +3,7 @@ let score = document.querySelector(".score h1");
 let mario = document.querySelector(".mario");
 let obstacle = document.querySelector(".obstacle");
 let marioPosition = 0;
-
+//jump function
 function jump() {
   let startPosition = 0;
   let endPosition = 300;
@@ -19,6 +19,8 @@ function jump() {
     }
   }, 20);
 }
+//FALL FUNCTION
+
 function fall() {
   let startPosition = 300;
   let endPosition = 0;
@@ -28,12 +30,11 @@ function fall() {
 
       mario.style.bottom = startPosition + "px";
     } else {
-      clearInterval(jumpInterval);
-      fall();
+      clearInterval(fallInterval);
     }
   }, 20);
 }
-
+??
 function moveMario(direction) {
   let activePos;
   if (direction === "left") {
@@ -63,6 +64,7 @@ window.addEventListener("keydown", function (e) {
     case "a":
     case "A":
       moveMario("left");
+      break;
 
     //right
     case "ArrowRight":
