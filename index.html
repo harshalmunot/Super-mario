@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,11 +7,19 @@
     <title>Super Mario</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="game-container">
       <!-- score -->
       <div class="score">
         <h1>Score : 0</h1>
+      </div>
+
+      <!-- game over -->
+      <div class="game-over">
+        <h1>Game Over</h1>
+        <h2 class="final-score">Score : 0</h2>
+        <button onclick="restartGame()">Restart</button>
       </div>
 
       <!-- obstacle -->
@@ -34,11 +43,11 @@
       <img src="./assets/platform.png" alt="platform" />
       <img src="./assets/platform.png" alt="platform" />
       <img src="./assets/platform.png" alt="platform" />
+      <!-- <img src="./assets/platform.png" alt="platform" /> -->
+      <!-- <img src="./assets/platform.png" alt="platform" />
       <img src="./assets/platform.png" alt="platform" />
       <img src="./assets/platform.png" alt="platform" />
-      <img src="./assets/platform.png" alt="platform" />
-      <img src="./assets/platform.png" alt="platform" />
-      <img src="./assets/platform.png" alt="platform" />
+      <img src="./assets/platform.png" alt="platform" /> -->
     </div>
 
     <script src="script.js"></script>

@@ -1,88 +1,154 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center
-    ;
-    flex-direction: column;
-    overflow: hidden;
-    /* position: relative; */
-    background-color: black;
-
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+overflow: hidden;
+background-color: black;
 }
-
 
 .game-container{
-    background-color: skyblue;
-    width: 80%;
-    height: 90vh;
+background-color: skyblue;
+width: 80%;
+height: 90vh;
 
-    position: relative;
-    overflow: hidden;
+position: relative;
+overflow: hidden;
 
 }
 
-.obstacle {
-    width: 100px;
-    overflow: hidden;
-    /* background-color: red; */
+/* score */
 
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
+.score{
+position: absolute;
+top: 20px;
+left: 30px;
+
+z-index: 10;
+
+}
+
+.score h1{
+color: white;
+font-family: Arial, sans-serif;
+font-size: 30px;
+}
+
+/* obstacle */
+
+.obstacle{
+width: 100px;
+height: 120px;
+
+position: absolute;
+bottom: 0;
+
+left: 100%;
+
+z-index: 4;
+
 }
 
 .obstacle img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+width: 100%;
+height: 100%;
+
+object-fit: contain;
+
 }
 
-.mario {
-    width: 100px;
-    overflow: hidden;
+/* mario */
 
-    position: absolute;
-    bottom: 0px;
-    /* left: 20px; */
+.mario{
+width: 100px;
+height: 100px;
+
+position: absolute;
+bottom: 0;
+left: 0;
+
+z-index: 5;
+
 }
 
 .mario img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+width: 100%;
+height: 100%;
+
+object-fit: contain;
+
 }
 
 .mario.flipped img{
-    transform: scaleX(-1);
+transform: scaleX(-1);
 }
 
+/* platform */
+
 .platform{
-    width: 80%;
-    height: 10vh;
-    
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
+width: 100%;
+height: 10vh;
+
+
+overflow: hidden;
+
+position: absolute;
+bottom: 0;
+left: 10%;
+
 }
 
 .platform img{
-    width: 110px;
-    height: 100%;
+width: 10%;
+height: 100%;
 
-    object-fit: cover;
-    
+object-fit: cover;
+
 }
 
+/* game over */
 
-.score {
-    
-    position: absolute;
-    top : 20%;
-    left : 20%;
+.game-over{
+position: absolute;
+
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+background-color: rgba(0, 0, 0, 0.8);
+
+padding: 30px;
+
+text-align: center;
+
+color: white;
+
+display: none;
+
+z-index: 20;
+
+}
+
+.game-over h1{
+margin-bottom: 15px;
+}
+
+.final-score{
+margin-bottom: 20px;
+}
+
+.game-over button{
+padding: 8px 20px;
+
+font-size: 18px;
+
+cursor: pointer;
+
 }
